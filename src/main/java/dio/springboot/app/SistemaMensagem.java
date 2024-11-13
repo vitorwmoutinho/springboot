@@ -11,11 +11,11 @@ import java.util.List;
 
 @Component
 public class SistemaMensagem implements CommandLineRunner {
-    @Value("$nome")
+    @Value("${name:NoReply-DIO}")
     private String nome;
-    @Value("$email")
+    @Value("${email}")
     private String email;
-    @Value("$telefone")
+    @Value("${telefone}")
     private List<Long> telefone;
 
 
