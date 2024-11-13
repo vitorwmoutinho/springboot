@@ -11,18 +11,13 @@ import java.util.List;
 
 @Component
 public class SistemaMensagem implements CommandLineRunner {
-    @Value("${name:NoReply-DIO}")
-    private String nome;
-    @Value("${email}")
-    private String email;
-    @Value("${telefone}")
-    private List<Long> telefone;
+    @Autowired
+    private Remetente remetente;
 
-
-    @Override
+        @Override
     public void run(String... args) throws Exception {
-        System.out.println("Mensagem enviada por: "+ nome + "\nE-mail: " +
-                email +"\nTelefone: "+ telefone);
+        System.out.println("Mensagem enviada por: "+ remetente.getNome() + "\nE-mail: " +
+                remetente.getEmail() +"\nTelefone: "+ remetente.getTelefone());
         System.out.println("Seu cadastro foi aprovado");
     }
 }
