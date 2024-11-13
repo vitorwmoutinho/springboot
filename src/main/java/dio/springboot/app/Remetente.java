@@ -1,4 +1,4 @@
 package dio.springboot.app;
 
-public class Beans {
+public class Remetente {
 }
