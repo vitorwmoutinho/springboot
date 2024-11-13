@@ -13,15 +13,7 @@ public class PrimeirosPassosApplication {
 		SpringApplication.run(PrimeirosPassosApplication.class, args);
 
 	}
-	@Bean
-	public CommandLineRunner run(SistemaMensagem sistema) throws Exception{
-		return  args -> {
-			sistema.enviarConfirmacaoCadastro();
-			sistema.enviarMensagemBoasVindas();
-			sistema.enviarConfirmacaoCadastro();
 
-		};
-	}
 
 
 
